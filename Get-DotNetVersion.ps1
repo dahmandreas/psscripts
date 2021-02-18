@@ -10,4 +10,5 @@ ElseIf ((Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\F
 ElseIf ((Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\').Release -ge 378675) { $DotNetVersion = "4.5.1" }
 ElseIf ((Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\').Release -ge 378389) { $DotNetVersion = "4.5" }
 
-$DotNetVersion
+Write-Host "Installed .NET Version: " -NoNewline
+Write-Host -ForegroundColor Green $DotNetVersion
